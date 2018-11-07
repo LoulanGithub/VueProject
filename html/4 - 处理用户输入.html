@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<script type="text/javascript" src="../js/jquery/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="../js/vue/vue.js"></script>
+
+	<script type="text/javascript">
+        $(function () {
+            new Vue({
+                el:'#app',
+                data:{
+                    message:'Hello Vue.js!'
+                },
+				methods:{
+                    reverseMessage:function () {
+                        //这个操作可以进行数据的翻转
+                        this.message = this.message.split('').reverse().join('')
+                    }
+				}
+            });
+        })
+	</script>
+</head>
+<body>
+	<div id="app">
+		<input type="text" v-model="message">
+		<p>数据随输入变化而变化（无*）：{{  message  }}</p>
+		<button v-on:click="reverseMessage" style="width: 100px;height: 50px;">测试按钮</button>
+	</div>
+</body>
+</html>

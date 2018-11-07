@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<script type="text/javascript" src="../js/jquery/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="../js/vue/vue.js"></script>
+
+	<script type="text/javascript">
+        $(function () {
+            new Vue({
+                el:"#app",
+                data:{
+                    id:2,
+					ok:true
+                }
+            });
+        })
+	</script>
+</head>
+<body>
+	<div id="app">
+		{{5+5}}<br>
+		{{ok? 'yes' : 'no'}}<br>
+		<div v-bind:id="'list'+id">这是一个div的框</div>
+	</div>
+</body>
+</html>

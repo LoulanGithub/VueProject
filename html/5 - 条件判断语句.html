@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+
+	<script type="text/javascript" src="../js/jquery/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="../js/vue/vue.js"></script>
+
+	<script type="text/javascript">
+		$(function () {
+            new Vue({
+                el:"#app",
+                data:{
+                    ifData:true,
+                    ifData2:false
+                }
+            });
+        })
+	</script>
+</head>
+<body>
+	<div id="app">
+
+		<p>if条件判断语句的测试：</p>
+		<span v-if="ifData">我是1，下面是2</span><br>
+		<span v-if="ifData2">我是2，上面是1</span>
+
+	</div>
+
+
+</body>
+</html>

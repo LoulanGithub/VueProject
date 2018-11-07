@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+
+	<script type="text/javascript" src="../js/jquery/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="../js/vue/vue.js"></script>
+
+	<script type="text/javascript">
+        $(function () {
+            new Vue({
+                el:"#app",
+                data:{
+                    htmlData:'<span style="color: red;">字体显示为红色则表示测试很成功</span>'
+                }
+            });
+        })
+	</script>
+</head>
+<body>
+	<div id="app">
+		<div v-html="htmlData"></div>
+		<div v-html="htmlData"></div>
+	</div>
+</body>
+</html>
