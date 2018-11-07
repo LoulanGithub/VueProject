@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<script type="text/javascript" src="../js/jquery/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="../js/vue/vue.js"></script>
+
+	<script type="text/javascript" >
+        $(function () {
+            new Vue({
+                el:'#app',
+                data:{
+                    message:'Helloo World!'
+                },
+				filters:{
+                    big:function (value) {
+						value = value.toString();
+						return value.toUpperCase();
+                    }
+				}
+            });
+        })
+	</script>
+</head>
+<body >
+	<div id="app">
+		<input type="text" v-model="message"> <br>
+
+		{{message | big}}
+	</div>
+</body>
+</html>
